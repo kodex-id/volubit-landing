@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ThemeToggle from './ThemeToggle';
 import './Header.css';
 
 function IconSearch() {
@@ -17,7 +16,7 @@ function MobileNav({ isOpen, onClose }) {
         <a href="#news" onClick={onClose}>News</a>
         <a href="#membership" onClick={onClose}>Membership</a>
         <a href="#tools" onClick={onClose}>Tools</a>
-        <button className="login-btn">Login</button>
+        <a href="#login" onClick={onClose}>Login</a>
       </div>
     </div>
   );
@@ -29,22 +28,18 @@ export default function Header() {
     <>
       <header className="volubit-header">
         <div className="header-inner">
-          {/* Logo dihapus agar hanya ada di hero */}
-          <nav className="nav desktop-nav">
+          <nav className="header-menu">
             <a href="#news">NEWS</a>
             <a href="#membership">MEMBERSHIP</a>
-          </nav>
-          <div className="header-actions">
-            <button className="icon-btn"><IconSearch /></button>
-            <button className="icon-btn"><IconCart /></button>
-            <ThemeToggle />
-            <button className="login-btn desktop-login">LOGIN</button>
+            <button className="icon-btn" aria-label="Search"><IconSearch /></button>
+            <button className="icon-btn" aria-label="Cart"><IconCart /></button>
+            <a href="#login">LOGIN</a>
             <button className="hamburger-btn" onClick={() => setMobileNavOpen(true)} aria-label="Open menu">
               <span></span>
               <span></span>
               <span></span>
             </button>
-          </div>
+          </nav>
         </div>
       </header>
       <MobileNav isOpen={mobileNavOpen} onClose={() => setMobileNavOpen(false)} />

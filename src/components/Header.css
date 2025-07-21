@@ -17,35 +17,33 @@
   justify-content: flex-end;
   box-sizing: border-box;
 }
-.desktop-nav {
+.header-menu {
   display: flex;
-  gap: 2rem;
-  margin-right: 2.5rem;
+  align-items: center;
+  gap: 1.5rem;
 }
-.desktop-nav a {
+.header-menu a {
   color: #fff;
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-decoration: none;
   transition: color 0.2s;
   outline: none;
-}
-.desktop-nav a:hover, .desktop-nav a:focus {
-  color: var(--color-accent);
-}
-.header-actions {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+}
+.header-menu a:hover, .header-menu a:focus {
+  color: var(--color-accent);
 }
 .icon-btn {
   background: none;
   border: none;
-  color: var(--color-accent);
+  color: #fff;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,33 +51,10 @@
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   cursor: pointer;
 }
-.icon-btn:hover {
+.icon-btn:hover, .icon-btn:focus {
   background: var(--color-accent);
   color: #fff;
   box-shadow: 0 2px 12px 0 rgba(0,163,255,0.18);
-}
-.login-btn {
-  background: var(--color-accent);
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  font-weight: bold;
-  font-size: 1rem;
-  box-shadow: 0 2px 16px 0 rgba(0,163,255,0.15);
-  cursor: pointer;
-  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
-  outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-.login-btn:hover {
-  background: #009fd1;
-  box-shadow: 0 4px 32px 0 rgba(0,163,255,0.25);
-  transform: translateY(-2px) scale(1.04);
 }
 .hamburger-btn {
   background: var(--color-accent);
@@ -104,7 +79,7 @@
   border-radius: 2px;
   transition: all 0.3s;
 }
-.hamburger-btn:hover {
+.hamburger-btn:hover, .hamburger-btn:focus {
   background: #009fd1;
 }
 .mobile-nav-overlay {
@@ -145,10 +120,7 @@
   .header-inner {
     padding: 0.5rem 1rem;
   }
-  .nav {
-    gap: 1rem;
-  }
-  .desktop-nav, .desktop-login {
+  .header-menu a, .icon-btn {
     display: none;
   }
   .hamburger-btn {
