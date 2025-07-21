@@ -1,7 +1,7 @@
 .scroll-to-top .scroll-btn {
   position: fixed;
-  bottom: 0.5rem;
-  right: 0.5rem;
+  bottom: 2rem;
+  right: 2rem;
   background: var(--color-accent);
   color: #fff;
   border: none;
@@ -107,8 +107,8 @@
   .scroll-to-top .scroll-btn {
     width: 45px;
     height: 45px;
-    bottom: 0.5rem;
-    right: 0.5rem;
+    bottom: 1rem;
+    right: 1rem;
   }
   
   .scroll-icon {
