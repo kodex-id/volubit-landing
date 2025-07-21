@@ -61,7 +61,7 @@
 }
 .hero-cta-row {
   display: flex;
-  gap: 1.2rem;
+  gap: 1.1rem;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -69,37 +69,42 @@
   font-size: 1.08rem;
   font-weight: 700;
   border-radius: 999px;
-  padding: 0.85rem 2.2rem;
-  border: none;
+  padding: 0.55em 1.8em;
+  border: 2.5px solid transparent;
   cursor: pointer;
-  transition: background 0.2s, box-shadow 0.2s, color 0.2s, transform 0.2s;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
   box-shadow: 0 2px 16px 0 rgba(0,163,255,0.10);
   outline: none;
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  min-width: 120px;
+  justify-content: center;
+  letter-spacing: 0.01em;
 }
 .hero-btn.primary {
-  background: #00CFFF;
+  background: #19c0ff;
   color: #fff;
+  border-color: #19c0ff;
   box-shadow: 0 4px 32px 0 rgba(0,163,255,0.18);
 }
 .hero-btn.primary:hover {
   background: #009fd1;
   color: #fff;
+  border-color: #009fd1;
   transform: translateY(-2px) scale(1.04);
   box-shadow: 0 8px 40px 0 rgba(0,163,255,0.28);
 }
 .hero-btn.outline {
   background: transparent;
   color: #fff;
-  border: 2px solid #b3dfff;
+  border: 2.5px solid #fff;
 }
 .hero-btn.outline:hover {
   background: #19232e;
-  color: #00CFFF;
-  border-color: #00CFFF;
+  color: #19c0ff;
+  border-color: #19c0ff;
 }
 .hero-btn-arrow {
   font-size: 1.2em;
