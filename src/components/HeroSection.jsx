@@ -4,7 +4,6 @@ import './HeroSection.css';
 export default function HeroSection() {
   return (
     <section className="hero-section">
-      {/* Hapus logo bintang di sini */}
       <div className="hero-content">
         <div className="hero-badge" data-aos="fade-up" data-aos-delay="0">The Future of Web3 Education</div>
         <h1 className="hero-title" data-aos="fade-up" data-aos-delay="100">
