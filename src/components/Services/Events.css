@@ -1,0 +1,110 @@
+.events-section {
+  padding: 4rem 1rem 2.5rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.events-upcoming {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  background: var(--color-glass);
+  border: 1.5px solid var(--color-border);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 24px 0 rgba(0,163,255,0.08);
+  padding: 2rem 2.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.events-upcoming-img {
+  width: 320px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px 0 rgba(0,163,255,0.10);
+}
+.events-upcoming-info {
+  flex: 1;
+  min-width: 220px;
+}
+.events-upcoming-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+.events-date {
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  margin-bottom: 0.7rem;
+}
+.events-upcoming-info p {
+  color: var(--color-text);
+  margin-bottom: 1.2rem;
+}
+.events-btn {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 2px 16px 0 rgba(0,163,255,0.12);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.events-btn:hover {
+  background: linear-gradient(90deg, var(--color-accent), #4f8cff 80%);
+  box-shadow: 0 4px 32px 0 rgba(0,163,255,0.22);
+  transform: translateY(-2px) scale(1.04);
+}
+.events-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+.events-photo {
+  width: 160px;
+  height: 120px;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 2px 16px 0 rgba(0,163,255,0.10);
+  border: 2px solid var(--color-border);
+  transition: box-shadow 0.2s, border 0.2s, filter 0.2s, transform 0.2s;
+  opacity: 0;
+  transform: translateY(32px);
+  animation: fadeInUp 0.7s forwards;
+}
+.events-photo:hover {
+  box-shadow: 0 8px 32px 0 rgba(0,163,255,0.18);
+  border-color: var(--color-accent);
+  filter: brightness(1.08) saturate(1.2);
+  transform: scale(1.04) translateY(-4px);
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 900px) {
+  .events-upcoming {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.2rem 1rem;
+  }
+  .events-upcoming-img {
+    width: 100%;
+    height: 160px;
+  }
+  .events-gallery {
+    gap: 0.7rem;
+  }
+}
+@media (max-width: 600px) {
+  .events-photo {
+    width: 100px;
+    height: 70px;
+  }
+} 

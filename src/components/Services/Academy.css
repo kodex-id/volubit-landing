@@ -1,0 +1,63 @@
+.academy-section {
+  padding: 4rem 1rem 2.5rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-title {
+  font-family: var(--font-headline);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.academy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.academy-card {
+  background: var(--color-glass);
+  border: 1.5px solid var(--color-border);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 24px 0 rgba(0,163,255,0.08);
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  text-align: center;
+  transition: box-shadow 0.2s, border 0.2s, transform 0.2s;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(32px);
+  animation: fadeInUp 0.7s forwards;
+}
+.academy-card:hover {
+  box-shadow: 0 8px 40px 0 rgba(0,163,255,0.18);
+  border-color: var(--color-accent);
+  transform: translateY(-6px) scale(1.03);
+}
+.academy-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+  color: var(--color-accent);
+}
+.academy-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: var(--color-text);
+}
+.academy-card p {
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 900px) {
+  .academy-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+} 

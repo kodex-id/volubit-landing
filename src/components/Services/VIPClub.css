@@ -1,0 +1,72 @@
+.vipclub-section {
+  padding: 4rem 1rem 2.5rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.vipclub-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+.vipclub-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.vipclub-benefits li {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 1.3rem;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(32px);
+  animation: fadeInUp 0.7s forwards;
+}
+.vipclub-icon {
+  font-size: 1.5rem;
+  margin-right: 0.7rem;
+  color: var(--color-accent);
+}
+.vipclub-gallery {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.vipclub-screenshot {
+  width: 120px;
+  height: 72px;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 2px 16px 0 rgba(0,163,255,0.10);
+  border: 2px solid var(--color-border);
+  transition: box-shadow 0.2s, border 0.2s, filter 0.2s, transform 0.2s;
+  opacity: 0;
+  transform: translateY(32px);
+  animation: fadeInUp 0.7s forwards;
+}
+.vipclub-screenshot:hover {
+  box-shadow: 0 8px 32px 0 rgba(0,163,255,0.18);
+  border-color: var(--color-accent);
+  filter: brightness(1.08) saturate(1.2) blur(1px);
+  transform: scale(1.04) translateY(-4px);
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 900px) {
+  .vipclub-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .vipclub-gallery {
+    justify-content: flex-start;
+  }
+} 

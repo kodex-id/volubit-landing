@@ -1,0 +1,65 @@
+.agency-section {
+  padding: 4rem 1rem 2.5rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.agency-features {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.agency-feature {
+  background: var(--color-glass);
+  border: 1.5px solid var(--color-border);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 24px 0 rgba(0,163,255,0.07);
+  padding: 2rem 1.5rem;
+  min-width: 220px;
+  max-width: 320px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  transition: box-shadow 0.2s, border 0.2s, transform 0.2s;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(32px);
+  animation: fadeInUp 0.7s forwards;
+}
+.agency-feature:hover {
+  box-shadow: 0 8px 40px 0 rgba(0,163,255,0.15);
+  border-color: var(--color-accent);
+  transform: translateY(-6px) scale(1.03);
+}
+.agency-icon {
+  font-size: 2.2rem;
+  color: var(--color-accent);
+  margin-top: 0.2rem;
+}
+.agency-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.3rem;
+}
+.agency-desc {
+  color: var(--color-text-secondary);
+  font-size: 1.02rem;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 900px) {
+  .agency-features {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  .agency-feature {
+    width: 100%;
+    max-width: 100%;
+  }
+} 
