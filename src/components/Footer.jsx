@@ -8,7 +8,7 @@ const socials = [
     ),
     label: 'Telegram',
     url: '#',
-    abbr: 'TG',
+    abbr: '',
   },
   {
     icon: (
@@ -16,7 +16,7 @@ const socials = [
     ),
     label: 'X (Twitter)',
     url: '#',
-    abbr: 'X',
+    abbr: '',
   },
   {
     icon: (
@@ -24,7 +24,7 @@ const socials = [
     ),
     label: 'Instagram',
     url: '#',
-    abbr: 'IG',
+    abbr: '',
   },
 ];
 
