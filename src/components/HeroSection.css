@@ -87,27 +87,27 @@
   letter-spacing: 0.01em;
 }
 .hero-btn.primary {
-  background: #19c0ff;
+  background: #22c6fd;
   color: #fff;
-  border-color: #19c0ff;
+  border-color: #22c6fd;
   box-shadow: 0 4px 32px 0 rgba(0,163,255,0.18);
 }
 .hero-btn.primary:hover, .hero-btn.primary:active {
-  background: #009fd1;
+  background: #0eaee6;
   color: #fff;
-  border-color: #009fd1;
+  border-color: #0eaee6;
   transform: translateY(-2px) scale(1.04);
   box-shadow: 0 8px 40px 0 rgba(0,163,255,0.28);
 }
 .hero-btn.outline {
   background: transparent;
-  color: #19c0ff;
-  border: 2.5px solid #19c0ff;
+  color: #fff;
+  border: 2.5px solid #fff;
 }
 .hero-btn.outline:hover, .hero-btn.outline:active {
-  background: #19c0ff;
+  background: #22c6fd;
   color: #fff;
-  border-color: #19c0ff;
+  border-color: #22c6fd;
   transform: scale(1.04);
 }
 .hero-btn:active {
