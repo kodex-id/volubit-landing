@@ -21,6 +21,41 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure all sections use max-width */
+section {
+  width: 100%;
+  overflow: hidden;
+}
+
+section > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1240px) {
+  .container,
+  section > div {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container,
+  section > div {
+    padding: 0 1rem;
+  }
+}
+
 a {
   color: var(--color-accent);
   text-decoration: none;

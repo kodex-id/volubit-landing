@@ -15,23 +15,104 @@
   box-shadow: 0 4px 20px 0 rgba(0, 163, 255, 0.25);
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.3s, transform 0.3s, background 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
   animation: fadeInScrollBtn 0.4s forwards;
+  overflow: hidden;
+  position: relative;
 }
 
 .scroll-to-top .scroll-btn:hover {
   background: linear-gradient(90deg, #4f8cff 10%, var(--color-accent) 90%);
-  transform: scale(1.1);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 30px 0 rgba(0, 163, 255, 0.35);
 }
 
-.scroll-to-top .scroll-btn svg {
-  transform: rotate(360deg);
+.scroll-to-top .scroll-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.scroll-icon {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-btn.scrolling .scroll-icon {
+  animation: bounceAndRotate 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-progress {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--color-accent), #4f8cff);
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s;
+}
+
+.scroll-btn.scrolling .scroll-progress {
+  animation: progressPulse 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes bounceAndRotate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+@keyframes progressPulse {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
 }
 
 @keyframes fadeInScrollBtn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Hover effect enhancement */
+.scroll-btn:hover .scroll-icon {
+  transform: translateY(-3px);
+}
+
+/* Add smooth transition when button appears/disappears */
+.scroll-to-top {
+  transition: opacity 0.3s;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .scroll-to-top .scroll-btn {
+    width: 45px;
+    height: 45px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  .scroll-icon {
+    width: 20px;
+    height: 20px;
   }
 } 

@@ -40,20 +40,23 @@ function App() {
       easing: 'ease-out-cubic',
     });
   }, []);
+
   return (
     <ThemeProvider>
       <CursorGlow />
       <div className="app-root">
         <Header />
-        <FeaturedTicker />
-        <HeroSection />
-        <Academy />
-        <Media />
-        <VIPClub />
-        <Events />
-        <Agency />
-        <SocialProof />
-        <CTASection />
+        <div className="container">
+          <FeaturedTicker />
+          <HeroSection />
+          <Academy />
+          <Media />
+          <VIPClub />
+          <Events />
+          <Agency />
+          <SocialProof />
+          <CTASection />
+        </div>
         <Footer />
         <ScrollToTopButton />
       </div>

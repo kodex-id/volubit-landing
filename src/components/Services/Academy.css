@@ -23,35 +23,15 @@
   box-shadow: 0 2px 24px 0 rgba(0,163,255,0.08);
   padding: 2.5rem 1.5rem 2rem 1.5rem;
   text-align: center;
-  transition: box-shadow 0.2s, border 0.2s, transform 0.2s;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
   cursor: pointer;
   opacity: 0;
   transform: translateY(32px);
   animation: fadeInUp 0.7s forwards;
-  position: relative;
-  overflow: hidden;
-}
-.academy-card::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  background: conic-gradient(from 90deg at 50% 50%, var(--color-accent) 0%, #4f8cff 30%, transparent 70%, transparent 100%);
-  opacity: 0;
-  transition: opacity 0.3s, transform 0.5s;
-  animation: rotate-border 4s linear infinite paused;
-  z-index: -1;
-}
-.academy-card:hover::before {
-  opacity: 1;
-  animation-play-state: running;
-}
-@keyframes rotate-border {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 .academy-card:hover {
   box-shadow: 0 8px 40px 0 rgba(0,163,255,0.18);
-  border-color: transparent; /* Hide original border on hover */
+  border-color: var(--color-accent);
   transform: translateY(-6px) scale(1.03);
 }
 .academy-icon {
