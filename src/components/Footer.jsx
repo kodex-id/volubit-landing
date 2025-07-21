@@ -8,7 +8,7 @@ const socials = [
     ),
     label: 'Telegram',
     url: '#',
-    abbr: '',
+    abbr: 'TG',
   },
   {
     icon: (
@@ -16,7 +16,7 @@ const socials = [
     ),
     label: 'X (Twitter)',
     url: '#',
-    abbr: '',
+    abbr: 'X',
   },
   {
     icon: (
@@ -24,7 +24,15 @@ const socials = [
     ),
     label: 'Instagram',
     url: '#',
-    abbr: '',
+    abbr: 'IG',
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><g><rect width="24" height="24" rx="12" fill="currentColor"/><path d="M16.8 9.2c-.1-.4-.4-.7-.8-.8C15.2 8 12 8 12 8s-3.2 0-4 .4c-.4.1-.7.4-.8.8C7 10 7 12 7 12s0 2 .2 2.8c.1.4.4.7.8.8.8.2 4 .2 4 .2s3.2 0 4-.2c.4-.1.7-.4.8-.8.2-.8.2-2.8.2-2.8s0-2-.2-2.8zm-6.3 3.3V10.5l3.2 1.5-3.2 1.5z" fill="#fff"/></g></svg>
+    ),
+    label: 'YouTube',
+    url: '#',
+    abbr: 'YT',
   },
 ];
 
@@ -55,22 +63,22 @@ export default function Footer() {
         <div className="footer-col footer-links">
           <div className="footer-title">Services</div>
           <ul>
-            {services.map((s, i) => <li key={i} style={{ animationDelay: `${i * 0.07}s` }}><a href="#">{s}</a></li>)}
+            {services.map((s, i) => <li key={i}><a href="#">{s}</a></li>)}
           </ul>
         </div>
         <div className="footer-col footer-links">
           <div className="footer-title">Resources</div>
           <ul>
-            {resources.map((r, i) => <li key={i} style={{ animationDelay: `${(i + services.length) * 0.07}s` }}><a href={r.url}>{r.label}</a></li>)}
+            {resources.map((r, i) => <li key={i}><a href={r.url}>{r.label}</a></li>)}
           </ul>
         </div>
         <div className="footer-col footer-contact">
           <div className="footer-title">Contact</div>
           <ul>
-            <li style={{ animationDelay: `${(services.length + resources.length) * 0.07}s` }}><span className="footer-icon"><svg width="18" height="18" fill="none"><path d="M9 2C5.13 2 2 5.13 2 9c0 5.25 7 11 7 11s7-5.75 7-11c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 9 6a2.5 2.5 0 0 1 0 5.5z" fill="currentColor"/></svg></span>Jakarta Convention Center<br/>Jakarta, Indonesia</li>
-            <li style={{ animationDelay: `${(services.length + resources.length + 1) * 0.07}s` }}><span className="footer-icon"><svg width="18" height="18" fill="none"><path d="M2 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4zm2 0v.01L12 9l6-4.99V4a2 2 0 0 0-2-2H4z" fill="currentColor"/></svg></span>hello@volubit.com</li>
-            <li style={{ animationDelay: `${(services.length + resources.length + 2) * 0.07}s` }}><span className="footer-icon"><svg width="18" height="18" fill="none"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C4.48 22 2 19.52 2 16.5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.35.27 2.67.76 3.88a1 1 0 0 1-.21 1.11l-2.2 2.2z" fill="currentColor"/></svg></span>+62 21 1234 5678</li>
-            <li style={{ animationDelay: `${(services.length + resources.length + 3) * 0.07}s` }}><span className="footer-icon footer-star">★</span><a href="#" className="footer-trustpilot">Trustpilot Reviews</a></li>
+            <li><span className="footer-icon"><svg width="18" height="18" fill="none"><path d="M9 2C5.13 2 2 5.13 2 9c0 5.25 7 11 7 11s7-5.75 7-11c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 9 6a2.5 2.5 0 0 1 0 5.5z" fill="currentColor"/></svg></span>Jakarta Convention Center<br/>Jakarta, Indonesia</li>
+            <li><span className="footer-icon"><svg width="18" height="18" fill="none"><path d="M2 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4zm2 0v.01L12 9l6-4.99V4a2 2 0 0 0-2-2H4z" fill="currentColor"/></svg></span>hello@volubit.com</li>
+            <li><span className="footer-icon"><svg width="18" height="18" fill="none"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C4.48 22 2 19.52 2 16.5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.35.27 2.67.76 3.88a1 1 0 0 1-.21 1.11l-2.2 2.2z" fill="currentColor"/></svg></span>+62 21 1234 5678</li>
+            <li><span className="footer-icon footer-star">★</span><a href="#" className="footer-trustpilot">Trustpilot Reviews</a></li>
           </ul>
         </div>
       </div>
