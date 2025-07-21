@@ -10,7 +10,6 @@ import Agency from './components/Services/Agency';
 import SocialProof from './components/SocialProof';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
-import ScrollToTopButton from './components/ScrollToTopButton';
 import { ThemeProvider } from './hooks/useTheme';
 import './styles/global.css';
 import AOS from 'aos';
@@ -58,7 +57,6 @@ function App() {
           <CTASection />
         </div>
         <Footer />
-        <ScrollToTopButton />
       </div>
     </ThemeProvider>
   );
