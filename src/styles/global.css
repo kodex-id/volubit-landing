@@ -38,3 +38,23 @@ a:hover {
   background: var(--color-border);
   border-radius: 4px;
 }
+
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s;
+  filter: blur(60px);
+}
+@media (max-width: 800px) {
+  .cursor-glow {
+    display: none; /* Hide on mobile for performance */
+  }
+}

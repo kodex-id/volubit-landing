@@ -29,7 +29,7 @@
   font-size: 2rem;
   margin-right: 0.5rem;
 }
-.nav {
+.desktop-nav {
   display: flex;
   gap: 2rem;
 }
@@ -93,12 +93,62 @@
   box-shadow: 0 4px 32px 0 rgba(0,163,255,0.25);
   transform: translateY(-2px) scale(1.04);
 }
+.hamburger-btn {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+.hamburger-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  margin: 5px 0;
+  transition: all 0.3s;
+}
+.mobile-nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeIn 0.3s forwards;
+}
+.mobile-nav-content {
+  background: var(--color-bg);
+  width: 250px;
+  height: 100%;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: slideIn 0.4s forwards;
+}
+.mobile-nav-content a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-text);
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideIn { from { transform: translateX(100%); } to { transform: translateX(0); } }
+
 @media (max-width: 800px) {
   .header-inner {
     padding: 0.5rem 1rem;
   }
   .nav {
     gap: 1rem;
+  }
+  .desktop-nav, .desktop-login {
+    display: none;
+  }
+  .hamburger-btn {
+    display: block;
   }
 }
 @media (max-width: 600px) {

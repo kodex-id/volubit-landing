@@ -15,6 +15,21 @@ import './styles/global.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+function CursorGlow() {
+  const glowRef = React.useRef(null);
+  React.useEffect(() => {
+    const handleMouseMove = (e) => {
+      if (glowRef.current) {
+        glowRef.current.style.left = `${e.clientX}px`;
+        glowRef.current.style.top = `${e.clientY}px`;
+      }
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+  return <div className="cursor-glow" ref={glowRef} />;
+}
+
 function App() {
   React.useEffect(() => {
     AOS.init({
@@ -26,6 +41,7 @@ function App() {
   }, []);
   return (
     <ThemeProvider>
+      <CursorGlow />
       <div className="app-root">
         <Header />
         <FeaturedTicker />
