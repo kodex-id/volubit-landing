@@ -100,6 +100,7 @@
   margin-bottom: 0.7rem;
   color: var(--color-accent);
   font-size: 1.1rem;
+  font-family: var(--font-headline);
 }
 .footer-links ul, .footer-contact ul {
   list-style: none;
@@ -146,6 +147,9 @@
 }
 .footer-trustpilot:hover {
   text-decoration: underline;
+}
+.footer-desc, .footer-links a, .footer-contact, .footer-social-abbr {
+  font-family: var(--font-main);
 }
 @media (max-width: 1240px) {
   .footer-inner {

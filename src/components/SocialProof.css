@@ -23,17 +23,26 @@
   transform: translateY(32px);
   animation: fadeInUp 0.7s forwards;
 }
+.section-title {
+  font-family: var(--font-headline);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
 .stat-value {
   font-size: 2.5rem;
   font-weight: 800;
   color: var(--color-accent);
   margin-bottom: 0.5rem;
   text-shadow: 0 0 16px var(--color-accent), 0 2px 8px rgba(0,0,0,0.08);
+  font-family: var(--font-headline);
 }
-.stat-label {
-  color: var(--color-text-secondary);
-  font-size: 1.1rem;
-  font-weight: 500;
+
+.stat-label, .testimonial-text, .testimonial-name, .carousel-dots, .partner-logo, .footer-trustpilot {
+  font-family: var(--font-main);
 }
 .socialproof-testimonials {
   margin: 2.5rem 0 2.5rem 0;

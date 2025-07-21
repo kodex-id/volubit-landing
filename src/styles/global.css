@@ -1,9 +1,14 @@
-@import url('./variables.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Nunito:wght@400;700&display=swap');
 
 html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+:root {
+  --font-main: 'Inter', 'Nunito', 'Segoe UI', Arial, sans-serif;
+  --font-headline: 'Inter', 'Nunito', 'Segoe UI', Arial, sans-serif;
 }
 
 body {
@@ -12,6 +17,10 @@ body {
   font-family: var(--font-main);
   transition: background 0.3s, color 0.3s;
   min-height: 100vh;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .app-root {
@@ -19,6 +28,7 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   transition: background 0.3s, color 0.3s;
+  font-family: var(--font-main);
 }
 
 .container {

@@ -44,10 +44,12 @@
   font-weight: 700;
   margin-bottom: 0.7rem;
   color: var(--color-text);
+  font-family: var(--font-headline);
 }
 .academy-card p {
   color: var(--color-text-secondary);
   font-size: 1.05rem;
+  font-family: var(--font-main);
 }
 @keyframes fadeInUp {
   to {
