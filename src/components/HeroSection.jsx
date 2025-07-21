@@ -1,28 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './HeroSection.css';
 
+function VolubitLogo() {
+  return (
+    <div className="hero-logo">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 4L36.5 20.5H51L39 29.5L43.5 46L32 36.5L20.5 46L25 29.5L13 20.5H27.5L32 4Z" fill="#00CFFF"/>
+      </svg>
+    </div>
+  );
+}
+
 export default function HeroSection() {
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <section className="hero-section">
-      <div 
-        className="hero-bg-anim" 
-        aria-hidden="true" 
-        style={{ transform: `translateY(${offsetY * 0.4}px)` }}
-      />
+      <VolubitLogo />
       <div className="hero-content">
-        <h1 className="hero-title">LEARN. BUILD. INNOVATE.</h1>
-        <p className="hero-sub">Platform Web3 & TechFi untuk belajar, membangun, dan berinovasi bersama komunitas terbaik.</p>
-        <div className="hero-cta">
-          <button className="hero-btn primary">Mulai Sekarang</button>
-          <button className="hero-btn secondary">Pelajari Lebih Lanjut</button>
+        <div className="hero-badge">The Future of Web3 Education</div>
+        <h1 className="hero-title">
+          Learn. Build. <span className="hero-highlight">Innovate.</span>
+        </h1>
+        <p className="hero-sub">
+          Volubit is your gateway to the world of crypto and Web3. Stay updated with the latest news and enhance your knowledge through our comprehensive educational resources.
+        </p>
+        <div className="hero-cta-row">
+          <button className="hero-btn primary">
+            Academy <span className="hero-btn-arrow">&gt;</span>
+          </button>
+          <button className="hero-btn outline">News</button>
+          <button className="hero-btn outline">Tools</button>
         </div>
       </div>
     </section>
