@@ -47,17 +47,20 @@
   font-weight: 800;
   color: #fff;
   margin-bottom: 1.2rem;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
 }
 .hero-highlight {
-  color: #00CFFF;
+  color: #19c0ff;
 }
 .hero-sub {
   color: #bfc7d5;
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   font-weight: 400;
   margin-bottom: 2.5rem;
   max-width: 600px;
+  font-family: var(--font-main);
+  letter-spacing: 0.01em;
 }
 .hero-cta-row {
   display: flex;
@@ -66,6 +69,7 @@
   flex-wrap: wrap;
 }
 .hero-btn {
+  font-family: var(--font-main);
   font-size: 1.08rem;
   font-weight: 700;
   border-radius: 999px;

@@ -1,4 +1,4 @@
-@import url('./variables.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 
 html, body, #root {
   height: 100%;
@@ -7,8 +7,8 @@ html, body, #root {
 }
 
 :root {
-  --font-main: 'Inter', 'SF Pro', Arial, sans-serif;
-  --font-headline: 'Inter', 'Monument Extended', Arial, sans-serif;
+  --font-main: 'Inter', Arial, sans-serif;
+  --font-headline: 'Inter', Arial, sans-serif;
 }
 
 body {
