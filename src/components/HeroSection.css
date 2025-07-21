@@ -1,11 +1,11 @@
 .hero-section {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   background: var(--color-bg);
-  padding-top: 2.5rem;
+  padding-top: 0.5rem;
   position: relative;
 }
 
@@ -30,8 +30,8 @@
 
 .hero-badge {
   display: inline-block;
-  background: #19232e;
-  color: #b3dfff;
+  background: #19c0ff;
+  color: #fff;
   font-size: 1rem;
   font-weight: 600;
   border-radius: 1.2rem;
@@ -40,7 +40,6 @@
   letter-spacing: 0.01em;
   box-shadow: 0 2px 12px 0 rgba(0,163,255,0.08);
 }
-
 .hero-title {
   font-family: var(--font-headline);
   font-size: clamp(2.2rem, 7vw, 3.5rem);
@@ -51,10 +50,10 @@
   line-height: 1.08;
 }
 .hero-highlight {
-  color: #00CFFF;
+  color: #19c0ff;
 }
 .hero-sub {
-  color: #bfc7d5;
+  color: #e0e6ef;
   font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 2.5rem;
@@ -93,7 +92,7 @@
   border-color: #19c0ff;
   box-shadow: 0 4px 32px 0 rgba(0,163,255,0.18);
 }
-.hero-btn.primary:hover {
+.hero-btn.primary:hover, .hero-btn.primary:active {
   background: #009fd1;
   color: #fff;
   border-color: #009fd1;
@@ -102,30 +101,55 @@
 }
 .hero-btn.outline {
   background: transparent;
-  color: #fff;
-  border: 2.5px solid #fff;
-}
-.hero-btn.outline:hover {
-  background: #19232e;
   color: #19c0ff;
+  border: 2.5px solid #19c0ff;
+}
+.hero-btn.outline:hover, .hero-btn.outline:active {
+  background: #19c0ff;
+  color: #fff;
   border-color: #19c0ff;
+  transform: scale(1.04);
+}
+.hero-btn:active {
+  transform: scale(0.97);
 }
 .hero-btn-arrow {
   font-size: 1.2em;
   margin-left: 0.2em;
   display: inline-block;
 }
-@media (max-width: 700px) {
+@media (max-width: 600px) {
+  .hero-section {
+    min-height: 70vh;
+    padding-top: 0.2rem;
+  }
   .hero-title {
     font-size: 1.5rem;
+    line-height: 1.15;
+    margin-bottom: 0.7rem;
   }
-  .hero-content {
-    padding: 2rem 0.5rem;
+  .hero-badge {
+    font-size: 0.92rem;
+    padding: 0.25rem 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+  .hero-sub {
+    font-size: 0.98rem;
+    margin-bottom: 1.2rem;
+    padding: 0 0.2rem;
   }
   .hero-cta-row {
+    flex-direction: column;
     gap: 0.7rem;
+    width: 100%;
+    align-items: center;
   }
-  .hero-logo {
-    margin-bottom: 1.2rem;
+  .hero-btn {
+    min-width: 0;
+    width: 90%;
+    max-width: 320px;
+    font-size: 1rem;
+    padding: 0.5em 0.5em;
+    margin-bottom: 0.2rem;
   }
 } 
