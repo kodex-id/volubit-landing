@@ -30,6 +30,13 @@ a:hover {
   text-decoration: underline;
 }
 
+.footer-links a, .footer-trustpilot {
+  text-decoration: none;
+}
+.footer-links a:hover, .footer-trustpilot:hover {
+  text-decoration: underline;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   background: var(--color-bg);

@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './HeroSection.css';
 
 export default function HeroSection() {
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section className="hero-section">
-      <div className="hero-bg-anim" aria-hidden="true" />
+      <div 
+        className="hero-bg-anim" 
+        aria-hidden="true" 
+        style={{ transform: `translateY(${offsetY * 0.4}px)` }}
+      />
       <div className="hero-content">
         <h1 className="hero-title">LEARN. BUILD. INNOVATE.</h1>
         <p className="hero-sub">Platform Web3 & TechFi untuk belajar, membangun, dan berinovasi bersama komunitas terbaik.</p>
