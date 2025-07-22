@@ -47,6 +47,9 @@
 .socialproof-testimonials {
   margin: 2.5rem 0 2.5rem 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .testimonial-carousel {
   display: flex;
@@ -54,6 +57,9 @@
   align-items: stretch;
   min-height: 180px;
   position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .testimonial-card {
   background: var(--color-glass);
@@ -62,8 +68,8 @@
   box-shadow: 0 2px 24px 0 rgba(0,163,255,0.08);
   padding: 2rem 1.5rem 1.5rem 1.5rem;
   min-width: 260px;
-  max-width: 340px;
-  margin: 0 1rem;
+  max-width: 600px;
+  margin: 0 auto;
   opacity: 0;
   transform: scale(0.96) translateY(32px);
   transition: opacity 0.4s, transform 0.4s;
@@ -72,6 +78,8 @@
   top: 0;
   z-index: 1;
   pointer-events: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 .testimonial-card.active {
   opacity: 1;
@@ -103,6 +111,7 @@
   display: flex;
   justify-content: center;
   gap: 0.7rem;
+  align-items: center;
 }
 .dot {
   width: 10px;
