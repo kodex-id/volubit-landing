@@ -45,21 +45,27 @@
   font-family: var(--font-main);
 }
 .socialproof-testimonials {
-  margin: 2.5rem 0 2.5rem 0;
-  text-align: center;
+  width: 100vw;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: 2.5rem 0;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
 }
 .testimonial-carousel {
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
+  width: 100vw;
+  max-width: 100vw;
   min-height: 180px;
   position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
 }
 .testimonial-card {
   background: var(--color-glass);
@@ -73,19 +79,17 @@
   opacity: 0;
   transform: scale(0.96) translateY(32px);
   transition: opacity 0.4s, transform 0.4s;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
   width: 100%;
   box-sizing: border-box;
+  position: static;
 }
 .testimonial-card.active {
   opacity: 1;
   transform: scale(1) translateY(0);
   pointer-events: auto;
-  z-index: 2;
+  z-index: 3;
 }
 .testimonial-avatar {
   width: 56px;
