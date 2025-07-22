@@ -6,7 +6,7 @@
   position: relative;
   overflow: hidden;
   padding: 4rem 1rem 4rem 1rem;
-  background: none;
+  background: #0a0a0a;
 }
 .cta-section::before {
   content: '';
@@ -24,7 +24,7 @@
   100% { background-position: 75% 35%, 35% 75%, 100% 100%; }
 }
 .cta-content {
-  background: #0a0a0a;
+  background: transparent;
   border-radius: 1.5rem;
   border: 1.5px solid #22c6fd;
   box-shadow: 0 0 24px 0 #22c6fd33;
